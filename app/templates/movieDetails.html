@@ -22,11 +22,9 @@
                   <p class="card-text"><small class="text-muted">Status: {{movieDetails.status || '-'}}</small></p>
                   <p class="card-text"><small class="text-muted">Web Channel: {{movieDetails.webChannel.name || '-'}}</small></p>
                 </div>
-      
                 <p class="card-text movie-description col-md-12">{{movieSummary(movieDetails.summary)}}</p>
               </div>
             </div>
-            
           </div>
           <div class="col-md-12 seasons">
             <h4>Seasons Available</h4>
@@ -41,7 +39,6 @@
                   <p class="card-text"><small class="text-muted">Network: {{season.network.name || '-' }}</small></p>
                   <p class="card-text">{{movieSummary(season.summary)}}</p>
                   <span ng-if="!!season.summary" class="show-more" ng-click="showFullDescription(season)">Show More</span>
-                  
                 </div>
               </div>
             </div>
