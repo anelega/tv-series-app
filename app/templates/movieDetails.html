@@ -1,57 +1,53 @@
 <div class="movie-details">
-    <div class="container">
-        <div class="row movie-section">
-          <div class="card col-md-12">
-              <div class="row">
-                <div class="col-md-4 image-section">
-                  <img ng-src="{{movieDetails.image.medium}}" src="https://lumiere-a.akamaihd.net/v1/images/au_moviesshowcase_mulan_poster_r_2_54011055.jpeg?region=0,0,960,1420" class="card-img" alt="...">
+  <div class="container">
+    <div class="row movie-section">
+      <div class="card col-md-12">
+        <div class="row">
+          <div class="col-md-4 image-section">
+            <img ng-src="{{movieDetails.image.medium}}" src="https://lumiere-a.akamaihd.net/v1/images/au_moviesshowcase_mulan_poster_r_2_54011055.jpeg?region=0,0,960,1420" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8 description-section">
+            <div class="card-body">
+              <h5
+                class="card-title">{{movieDetails.name}}</h5>
+              <hr>
+              <div class="row movie-info">
+                <div class="col-md-4">
+                  <p class="card-text"><small class="text-muted">Started: {{movieDetails.premiered | date }}</small></p>
+                  <p class="card-text"><small class="text-muted">Type: {{movieDetails.type || '' }}</small></p>
+                  <p class="card-text"><small class="text-muted">Language: {{movieDetails.language || '' }}</small></p>
                 </div>
-                <div class="col-md-8 description-section">
-                  <div class="card-body">
-                    <h5
-                      class="card-title">{{movieDetails.name}}</h5>
-                    <hr>
-                    <div class="row movie-info">
-                      <div class="col-md-4">
-                        <p class="card-text"><small class="text-muted">Started: {{movieDetails.premiered | date }}</small></p>
-                        <p class="card-text"><small class="text-muted">Type: {{movieDetails.type || '' }}</small></p>
-                        <p class="card-text"><small class="text-muted">Language: {{movieDetails.language || '' }}</small></p>
-                      </div>
-                      <div class="col-md-8">
-                        <p class="card-text"><small class="text-muted">Genre: <span ng-repeat="genre in movieDetails.genres"> {{genre}}</span><span ng-if="!movieDetails.genres">-</span></small></p>
-                        <p class="card-text"><small class="text-muted">Status: {{movieDetails.status || '-'}}</small></p>
-                        <p class="card-text"><small class="text-muted">Web Channel: {{movieDetails.webChannel.name || '-'}}</small></p>
-                      </div>
-            
-                      <p class="card-text movie-description col-md-12">{{movieSummary(movieDetails.summary)}}</p>
-                    </div>
-                  </div>
-                  
+                <div class="col-md-8">
+                  <p class="card-text"><small class="text-muted">Genre: <span ng-repeat="genre in movieDetails.genres"> {{genre}}</span><span ng-if="!movieDetails.genres">-</span></small></p>
+                  <p class="card-text"><small class="text-muted">Status: {{movieDetails.status || '-'}}</small></p>
+                  <p class="card-text"><small class="text-muted">Web Channel: {{movieDetails.webChannel.name || '-'}}</small></p>
                 </div>
-                <div class="col-md-12 seasons">
-                  <h4>Seasons Available</h4>
-                  <hr>
-                  <div class="row">
-                    <div ng-repeat="season in movieSeasons" class="card col-md-3" style="width: 18rem;">
-                      <img ng-src="{{season.image.medium || movieDetails.image.medium}}" class="card-img-top" src="https://lumiere-a.akamaihd.net/v1/images/au_moviesshowcase_mulan_poster_r_2_54011055.jpeg?region=0,0,960,1420" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title"><a ng-href="{{season.url}}" target="_blank">Season {{season.number}} ({{season.episodeOrder}} episodes)</a></h5>
-                        <p class="card-text"><small class="text-muted">Premiere: {{season.premiereDate | date }}</small></p>
-                        <p class="card-text"><small class="text-muted">End Date: {{season.endDate | date }}</small></p>
-                        <p class="card-text"><small class="text-muted">Network: {{season.network.name || '-' }}</small></p>
-                        <p class="card-text">{{movieSummary(season.summary)}}</p>
-                        <span ng-if="!!season.summary" class="show-more" ng-click="showFullDescription(season)">Show More</span>
-                        
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
+      
+                <p class="card-text movie-description col-md-12">{{movieSummary(movieDetails.summary)}}</p>
               </div>
             </div>
+            
+          </div>
+          <div class="col-md-12 seasons">
+            <h4>Seasons Available</h4>
+            <hr>
+            <div class="row">
+              <div ng-repeat="season in movieSeasons" class="card col-md-3" style="width: 18rem;">
+                <img ng-src="{{season.image.medium || movieDetails.image.medium}}" class="card-img-top" src="https://lumiere-a.akamaihd.net/v1/images/au_moviesshowcase_mulan_poster_r_2_54011055.jpeg?region=0,0,960,1420" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><a ng-href="{{season.url}}" target="_blank">Season {{season.number}} ({{season.episodeOrder}} episodes)</a></h5>
+                  <p class="card-text"><small class="text-muted">Premiere: {{season.premiereDate | date }}</small></p>
+                  <p class="card-text"><small class="text-muted">End Date: {{season.endDate | date }}</small></p>
+                  <p class="card-text"><small class="text-muted">Network: {{season.network.name || '-' }}</small></p>
+                  <p class="card-text">{{movieSummary(season.summary)}}</p>
+                  <span ng-if="!!season.summary" class="show-more" ng-click="showFullDescription(season)">Show More</span>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      
+      </div>
     </div>
-    
+  </div>
 </div>
