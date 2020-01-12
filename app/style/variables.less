@@ -3,7 +3,6 @@
 @import 'modalDescription';
 @import 'about';
 
-
 @background: no-repeat fixed url(https://www.youtube.com/s/tv/html5/f4ebe109/img/default_bg.png);
 @font:  'Roboto Condensed', sans-serif;
 @font-header:  'Fjalla One', sans-serif;
@@ -17,7 +16,6 @@ body {
         font-family: @font;
     }
 }
-
 .navbar {
     span {
         opacity: 0.7;
@@ -26,48 +24,41 @@ body {
         font-size: 18px;
     }
 }
-
 .logo {
     width: 40px;
     height: 35px;
 }
-
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
 }
-
 ::-webkit-scrollbar-track {
     background-color: #111;
     border-radius: 10px;
 }
-
 ::-webkit-scrollbar-thumb {
     background: #333; 
     border-radius: 10px;
     border: 1px solid #444;
 }
-
 .modal.fade.in {
     opacity: 1;
- }
+}
  .modal.fade .modal-dialog {
     transform: translate(0, 0) !important;
- }
- .modal-dialog {
-     width: 100%;
- }
- 
- .modal-backdrop.fade {
-   opacity: 0.5 !important;
-  }
- .modal-header{
+}
+.modal-dialog {
+    width: 100%;
+}
+.modal-backdrop.fade {
+    opacity: 0.5 !important;
+}
+.modal-header{
     display: block;
- }
- .modal-content{
+}
+.modal-content{
     width: 600px;
- }
-
+}
 hr {
     color: white;
     opacity: 0.8;
