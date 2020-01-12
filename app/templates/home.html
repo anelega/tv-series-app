@@ -16,7 +16,7 @@
         <h4 ng-if="movies.length">{{movies.length}} Series Found</h4>
         <hr/>
         <div class="row" ng-if="!!movies">
-            <div ng-repeat="movie in movies" class="card col-md-4 " style="width: 18rem;" ng-click="getMovieDetail(movie.show)">
+            <div ng-repeat="movie in movies" class="card col-md-6 col-lg-4 " style="width: 18rem;" ng-click="getMovieDetail(movie.show)">
                 <img class="card-img-top"  ng-src="{{movie.show.image.medium}}" src="https://lumiere-a.akamaihd.net/v1/images/au_moviesshowcase_mulan_poster_r_2_54011055.jpeg?region=0,0,960,1420">
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold">{{movie.show.name}}</h5>  
