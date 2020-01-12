@@ -1,0 +1,72 @@
+
+.movie-details {
+    .movie-section {
+        .card {
+            margin-top: 20px;
+            background: #f2f2f2;
+            .card-body {
+                padding-top: 20px;
+  
+            }
+            .card-title {
+                font-family: @font-header;
+                font-size: 2.5em;
+            }
+            .card-img {
+                padding-top: 5px;
+            }
+            .card-text {
+                margin: 0;
+            }
+            .movie-description {
+                padding-top: 10px;
+            }
+            .seasons {
+                margin-top: 30px;
+                hr {
+                    margin: 5px 0;
+                }
+                h4 {
+                    font-family: @font-header;
+                    font-size: 25px;
+                }
+                .card {
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                    border: none;
+                    .card-img-top {
+                        max-height: 354px;
+                    }
+                    .card-body {
+                        padding: 0;
+                        .card-title {
+                            margin-top: 10px;
+                            font-size:20px;
+                            a {
+                                text-decoration: none;
+                                color: black;
+                                &:hover {
+                                    color: @hover;
+                                }
+                            }
+                        }
+                        .card-text {
+                            max-height: 70px;
+                            overflow: hidden;
+                        }
+                        .show-more {
+                            color: @hover;
+                            &:hover {
+                                cursor: pointer;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}

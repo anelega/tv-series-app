@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="tvSeriesApp">
+<head>
+    <title>TV Series App</title>
+
+    <!-- node modules files -->
+    <script src="/./node_modules/angular/angular.js"></script>
+    <!-- <script src="/./node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script> -->
+    <script src="/./node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <script src="/./node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-animate.js" integrity="sha256-uD+m1eH+Sfb2eqzATeDNsuUTWwS0id8KHGv4PILVzT0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-sanitize.js" integrity="sha256-fe1CNxJdqcp2+X9H3Sd0yqtxOv0cyK9DN52g+NhnBgQ=" crossorigin="anonymous"></script>
+
+    <!-- bootstrap -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <!-- Less files & variables -->
+    <link rel="stylesheet/less" type="text/less" href="./style/variables.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a ui-sref="main" class="navbar-brand">
+            <img class="logo" alt="no-img" ng-src="https://pbs.twimg.com/profile_images/517326018177011712/XwrARxbO.png"/>
+            <span>TV Series Search</span>
+        </a>
+        <a ui-sref="about"  class="navbar-brand">
+            <span>About</span> 
+        </a>
+    </nav>
+    
+    <div ui-view></div>
+    
+    <script src="app.js"></script>
+    <script src="./js/services.js"></script>
+    <script src="./js/controllers.js"></script>
+</body>
+</html>

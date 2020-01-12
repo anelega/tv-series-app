@@ -1,0 +1,79 @@
+
+.home {
+    .search-series {
+        margin-top: 70px;
+    }
+    .card {
+        padding: 10px;
+        background: transparent;
+        border: none;
+        color: white;
+        &:hover {
+            cursor: pointer;
+        }
+        .card-body {
+            padding: 5px;
+        }
+        .stars-container, .stars-container-no-ratings {
+            position: relative;
+            display: inline-block;
+            color: transparent;
+            font-size: 20px;
+            content: '★';
+        }    
+        .stars-container:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '★';
+            color: gold;
+        }
+        .stars-container-no-ratings:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '★';
+            color: gray;
+        }
+        .rating {
+            padding-bottom: 5px;
+        }
+        .card-title {
+            font-family: @font-header;
+            font-size: 26px;
+            margin: 0;
+            &:hover {
+                color: @hover;
+            }
+        }
+        img {
+            max-height: 505px;
+        }
+        .card-text {
+            min-height: 100px;
+            max-height: 100px;
+            overflow: hidden;
+        }
+        hr {
+            margin: 5px;
+        }
+    }
+    .input-group {
+        .form-control {
+            font-size: 1.3rem;
+        }
+        padding-bottom: 30px;
+        .input-group-append {
+            padding-left: 0;
+        }
+    }
+    .results {
+        opacity: 0.9;
+        color: white
+    }
+
+
+}
+
+
+

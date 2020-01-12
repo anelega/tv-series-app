@@ -1,0 +1,18 @@
+{
+  "name": "angular-js-tv-series",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "andrei-nelega",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "@uirouter/angularjs": "^1.0.24",
+    "angular": "^1.7.9",
+    "angular-ui-bootstrap": "^2.5.6"
+  }
+}

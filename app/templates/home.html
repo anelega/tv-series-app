@@ -1,0 +1,39 @@
+<div class="home">
+    <div class="container">
+        <form  class="input-group row search-series" ng-submit="submit()">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+                <div class="row">
+                    <input type="text" class="form-control col-md-8" placeholder="Your Series Here" aria-describedby="basic-addon2" ng-model="movieToSearch" required>
+                    <div class="input-group-append col-md-4">
+                        <button class="btn btn-danger btn-lg"  type="submit">Search</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="container results">
+        <h4 ng-if="movies.length">{{movies.length}} Series Found</h4>
+        <hr/>
+        <div class="row" ng-if="!!movies">
+            <div ng-repeat="movie in movies" class="card col-md-4 " style="width: 18rem;" ng-click="getMovieDetail(movie.show)">
+                <img class="card-img-top"  ng-src="{{movie.show.image.medium}}" src="https://lumiere-a.akamaihd.net/v1/images/au_moviesshowcase_mulan_poster_r_2_54011055.jpeg?region=0,0,960,1420">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">{{movie.show.name}}</h5>  
+                    <div class="rating">
+                        <span ng-if="movie.show.rating.average"><span class="stars-container">★</span> {{movie.show.rating.average}} / 10</span>
+                        <span ng-if="!movie.show.rating.average"><span class="stars-container-no-ratings">★</span> No Ratings Yet</span>
+                    </div> 
+                    <div>
+                        Premiered:
+                        <span ng-if="movie.show.premiered">{{movie.show.premiered | date }}</span>
+                        <span ng-if="!movie.show.premiered">No Information</span>
+                    </div>
+                    <span class="network">Network: {{movie.show.network.name || '-'}} </span>
+                    <hr>
+                    <p class="card-text">{{movieSummary(movie.show.summary)}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

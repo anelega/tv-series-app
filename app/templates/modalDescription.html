@@ -1,0 +1,28 @@
+<div class="modal-description">
+    <div class="modal-header">
+        <h3 class="modal-title text-center">Season {{season.number}}</h3>
+    </div>
+    
+    <div class="modal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img ng-src="{{season.image.medium}}" class="card-img-top" src="https://lumiere-a.akamaihd.net/v1/images/au_moviesshowcase_mulan_poster_r_2_54011055.jpeg?region=0,0,960,1420" alt="...">
+                    <p class="card-text"><small class="text-muted">Episodes: {{season.episodeOrder || '-'}}</small></p>
+                    <p class="card-text"><small class="text-muted">Premiere: {{season.premiereDate | date }}</small></p>
+                    <p class="card-text"><small class="text-muted">Premiere: {{season.endDate | date }}</small></p>
+                    <p class="card-text"><small class="text-muted">Network: {{season.network.name || '-'}}</small></p>
+                </div>
+                <div class="col-md-8">
+                    {{movieSummary(season.summary)}}
+                </div>  
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="modal-footer">
+        <button class="btn btn-dark" type="button" ng-click="go(season)">Season Link</button>
+        <button class="btn btn-danger" type="button" ng-click="cancel()">Close</button>
+    </div>
+</div>
